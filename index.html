@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #d998f7;
+      background-color: hsl(274, 100%, 90%);
       text-align: center;
     }
 
@@ -20,10 +21,13 @@
 
     h1 {
       margin-top: 20px;
+      font-family: 'cursive';
+      text-shadow: 2px 2px 3px black;
     }
 
+
     a {
-      color: #007bff; 
+      color: #007bff;
       text-decoration: none;
     }
 
@@ -43,47 +47,101 @@
     }
 
     strong {
-        background-color: #9d67fb; 
+      background-color: #9d67fb;
     }
 
+    .main {
+      margin: 0 auto;
+      width: 950px;
+      background-color: #fff;
+    }
 
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    section {
+      border-bottom: 2px solid black;
+      /* black border line at the bottom of each section */
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      /* Remove the border from the last section */
+    }
   </style>
 </head>
+
 <body>
-  <header>
-    <h1>Johnny Ving</h1>
-    <p><a href="mailto:jving@usc.edu">jving@usc.edu</a></p>
-    <p>Favorite color: <strong>Purple</strong></p>
-    <p>Favorite website: <a href="https://learnxinyminutes.com/">https://learnxinyminutes.com/</a></p>
-    <p>Favorite activity: </p><img class="favorite-activity"  src="https://i.ibb.co/KFnPy6J/5bbf31356dce0-05d1293b71b287233003839a7bf02559.png" alt="Favorite Activity">
-  </header>
-  <main id = "container">
-    <section>
-      <h2>Fall 2023 Schedule:</h2>
-      <ul>
-        <li>CSCI-104: Data Structures</li>
-        <li>CTIN-488: Game Design Workshop</li>
-        <li>CTIN-190: Introduction to Interactive Entertainment</li>
-        <li>ITP-303: Full Stack Web Development</li>
-        <li>ITP-104: Introduction to Web Development</li>
-      </ul>
+
+  <div id='main'>
+    <!-- Section 1-->
+    <section id='section1'>
+      <header>
+        <h1>Johnny Ving</h1>
+        <p><a href="mailto:jving@usc.edu">jving@usc.edu</a></p>
     </section>
-    <section>
-      <h2>Completed Assignments</h2>
-      <ul>
-        <li><a href="assignment_01/web-resume.html">Assignment 01: Web Resume </a></li>
-        <li><a href="assignment_02/interests-page.html">Assignment 02: Interests Page </a></li>
-        <li><a href="assignment_03/two-column-interests-page.html">Assignment 03: Two-Column Interests Page
-        </a></li>
-      </ul>
+
+
+    <!-- Section 2-->
+    <section id='section2' class="clearfix">
+      <!-- First column -->
+      <div class="column">
+        <p>Favorite color: <strong>Purple</strong></p>
+        <p>Favorite website: <a href="https://learnxinyminutes.com/">https://learnxinyminutes.com/</a></p>
+        <p>Favorite activity: </p><img class="favorite-activity"
+          src="https://i.ibb.co/KFnPy6J/5bbf31356dce0-05d1293b71b287233003839a7bf02559.png" alt="Favorite Activity">
+      </div>
+      <!-- Second column -->
+      <div class="column">
+        <h2>Fall 2023 Schedule:</h2>
+        <ul>
+          <li>CSCI-104: Data Structures</li>
+          <li>CTIN-488: Game Design Workshop</li>
+          <li>CTIN-190: Introduction to Interactive Entertainment</li>
+          <li>ITP-303: Full Stack Web Development</li>
+          <li>ITP-104: Introduction to Web Development</li>
+        </ul>
+      </div>
     </section>
-    <section>
-      <h2>Completed Labs</h2>
-      <ul>
-        <li><a href="index.html">Lab 02: Student Page</a></li>
-        <li><a href="lab_03/web-resume.html">Lab 03: Updated Resume</a></li>
-      </ul>
+
+    <!-- Section 3 -->
+    <section id='section3' class="clearfix">
+      <!-- First column -->
+      <div class="column">
+        <h2>Completed Assignments</h2>
+        <ul>
+          <li><a href="assignment_01/web-resume.html">Assignment 01: Web Resume </a></li>
+          <li><a href="assignment_02/interests-page.html">Assignment 02: Interests Page </a></li>
+          <li><a href="assignment_03/two-column-interests-page.html">Assignment 03: Two-Column Interests Page
+            </a></li>
+        </ul>
+      </div>
+      <!-- Second column -->
+      <div class="column">
+        <h2>Completed Labs</h2>
+        <ul>
+          <li><a href="index.html">Lab 02: Student Page</a></li>
+          <li><a href="lab_03/web-resume.html">Lab 03: Updated Resume</a></li>
+        </ul>
+      </div>
     </section>
-  </main>
+
+
+
+  </div>
+
 </body>
+
 </html>
