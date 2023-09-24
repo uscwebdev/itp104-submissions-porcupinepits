@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Membership Registration Form</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px #00000033;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        label, input, select, textarea {
+            margin-bottom: 10px; 
+        }
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            placeholder: "Type your message here..."; /* Placeholder attribute requirement */
+        }
+        input[type="submit"], input[type="reset"] {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+        input[type="reset"] {
+            background: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <form action="confirmation.html" method="POST" id="membershipForm">
+        <h1>Membership Registration Form</h1>
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label>Membership Type:</label>
+        <div><input type="radio" id="standard" name="membershipType" value="Standard" required><label for="standard">Standard</label></div>
+        <div><input type="radio" id="premium" name="membershipType" value="Premium" required><label for="premium">Premium</label></div>
+        <div><input type="radio" id="vip" name="membershipType" value="VIP" required><label for="vip">VIP</label></div>
+
+        <label>Payment Method:</label>
+        <div><input type="radio" id="creditCard" name="paymentMethod" value="Credit Card" required><label for="creditCard">Credit Card</label></div>
+        <div><input type="radio" id="paypal" name="paymentMethod" value="PayPal" required><label for="paypal">PayPal</label></div>
+        <div><input type="radio" id="bankTransfer" name="paymentMethod" value="Bank Transfer" required><label for="bankTransfer">Bank Transfer</label></div>
+
+        <label for="contactMethod">Preferred Contact Method:</label>
+        <select id="contactMethod" name="contactMethod" required>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="mail">Mail</option>
+        </select>
+
+        <label>Are you excited?</label>
+        <div><input type="checkbox" id="somewhat" name="excited[]" value="Somewhat"><label for="somewhat">Somewhat</label></div>
+        <div><input type="checkbox" id="yes" name="excited[]" value="Yes"><label for="yes">Yes</label></div>
+        <div><input type="checkbox" id="ofCourse" name="excited[]" value="Of course!"><label for="ofCourse">Of course!</label></div>
+
+        <label for="additionalInfo">Additional Information/Requests:</label>
+        <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50" placeholder="Any additional information or requests..."></textarea>
+
+        <div>
+            <input type="checkbox" id="terms" name="terms" value="Accepted" required>
+            <label for="terms">I accept the Terms & Conditions</label>
+        </div>
+
+        <input type="submit" value="Submit Registration">
+        <input type="reset" value="Clear Form">
+    </form>
+</body>
+</html>
