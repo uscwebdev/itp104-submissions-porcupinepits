@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>December 2023 Calendar</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .calendar {
+            width: 1100px;
+            margin: auto;
+        }
+
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            background-image: url('https://www.pixel4k.com/wp-content/uploads/2020/08/the-valley-minimal-4k_1596932776.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .header h1 {
+            color: #fff;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 2px #000;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th {
+            background-color: #eaeaea;
+            height: 50px;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            text-align: center;
+            vertical-align: top;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            padding: 10px;
+        }
+
+        .prev-month,
+        .next-month {
+            color: #a0a0a0;
+        }
+
+        .event {
+            color: #ff0000;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .birthday {
+            background-image: url('https://wetakethecake.com/cdn/shop/products/GLUTEN-FREEBIRTHDAYCELEBRATIONGOLDENBUTTERCAKE-SLICE_1024x1024.jpg?v=1678807615');
+        }
+
+        .christmas {
+            background-image: url('https://assets.editorial.aetnd.com/uploads/2009/10/christmas-trees-gettyimages-1072744106.jpg');
+        }
+
+        .sisters-birthday {
+            background-image: url('https://hips.hearstapps.com/hmg-prod/images/cute-birthday-instagram-captions-1584723902.jpg?crop=0.668xw:1.00xh;0.167xw,0&resize=1200:*');
+        }
+
+        td::before {
+            content: attr(data-date);
+            font-family: 'Arial', sans-serif;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+        }
+
+        .event-text {
+            font-family: 'Arial', sans-serif;
+            text-shadow: 2px 2px 2px #000;
+            text-align: center;
+            vertical-align: middle;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calendar">
+        <div class="header">
+            <h1>December 2023</h1>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="prev-month" data-date="26"></td>
+                    <td class="prev-month" data-date="27"></td>
+                    <td class="prev-month" data-date="28"></td>
+                    <td class="prev-month" data-date="29"></td>
+                    <td class="prev-month" data-date="30"></td>
+                    <td data-date="1"></td>
+                    <td data-date="2"></td>
+                </tr>
+                <tr>
+                    <td class="event sisters-birthday" data-date="3">
+                        <div class="event-text">Sister's Birthday</div>
+                    </td>
+                    <td data-date="4"></td>
+                    <td data-date="5"></td>
+                    <td data-date="6"></td>
+                    <td data-date="7"></td>
+                    <td data-date="8"></td>
+                    <td data-date="9"></td>
+                </tr>
+                <tr>
+                    <td data-date="10"></td>
+                    <td data-date="11"></td>
+                    <td data-date="12"></td>
+                    <td data-date="13"></td>
+                    <td data-date="14"></td>
+                    <td data-date="15"></td>
+                    <td data-date="16"></td>
+                </tr>
+                <tr>
+                    <td data-date="17"></td>
+                    <td data-date="18"></td>
+                    <td data-date="19"></td>
+                    <td data-date="20"></td>
+                    <td data-date="21"></td>
+                    <td data-date="22"></td>
+                    <td data-date="23"></td>
+                </tr>
+                <tr>
+                    <td data-date="24"></td>
+                    <td class="event christmas" data-date="25">
+                        <div class="event-text">Christmas Day</div>
+                    </td>
+                    <td data-date="26"></td>
+                    <td class="event birthday" data-date="27">
+                        <div class="event-text">My Birthday</div>
+                    </td>
+                    <td data-date="28"></td>
+                    <td data-date="29"></td>
+                    <td data-date="30"></td>
+                </tr>
+                <tr>
+                    <td data-date="31"></td>
+                    <td class="next-month" data-date="1"></td>
+                    <td class="next-month" data-date="2"></td>
+                    <td class="next-month" data-date="3"></td>
+                    <td class="next-month" data-date="4"></td>
+                    <td class="next-month" data-date="5"></td>
+                    <td class="next-month" data-date="6"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
