@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <style>
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around; 
+        }
+
+        .photo {
+            position: relative;
+            margin: 10px;
+            width: 300px; 
+            height: 200px;
+            overflow: hidden; 
+        }
+
+        .photo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0,0,0,0.6); 
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+        }
+
+        .photo:hover .caption {
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1543039625-14cbd3802e7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80" alt="Hike down to the lake.">
+            <span class="caption">Hike down to the lake.</span>
+        </div>
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1502394202744-021cfbb17454?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3083&q=80" alt="Trees on a lake.">
+            <span class="caption">Trees on a lake.</span>
+        </div>
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1536257104079-aa99c6460a5a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80" alt="The Horizon.">
+            <span class="caption">Horizon.</span>
+        </div>
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1516739711484-6f80025660c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80" alt="Coyote Gulch">
+            <span class="caption">Coyote Gulch.</span>
+        </div>
+        <div class="photo">
+            <img src="https://images.unsplash.com/photo-1534685785745-60a2cea0ec34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3125&q=80" alt="Above the Clouds">
+            <span class="caption">Above the Clouds.</span>
+        </div>
+    </div>
+</body>
+</html>
