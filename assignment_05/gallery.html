@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 1100px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            gap: 20px;
+        }
+
+        .gallery-block {
+            position: relative;
+            background-color: #ccc;
+            width: calc(33.33% - 20px);
+            padding-top: 25%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 4 sizes for our collage*/
+
+        .gallery-block.wide {
+            width: calc(50% - 20px);
+            padding-top: 20%;
+        }
+
+        .gallery-block.tall {
+            width: calc(25% - 20px);
+            padding-top: 50%;
+        }
+
+        .gallery-block.large {
+            width: calc(50% - 20px);
+            padding-top: 50%;
+        }
+
+        .gallery-block.extrawide {
+            width: calc(75% - 20px);
+            padding-top: 30%;
+        }
+
+
+        .gallery-block img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-block:hover .caption {
+            opacity: 1;
+        }
+
+        header,
+        footer {
+            background: url("https://t3.ftcdn.net/jpg/02/54/66/08/360_F_254660811_nEM2z4ejjcNnCGJvLvlYK5xx5a4gzyRc.jpg") no-repeat center;
+            background-size: cover;
+            text-align: center;
+            padding: 15px 15;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Photo Gallery</h1>
+    </header>
+
+    <nav>
+        <a href="gallery.html" class="active">Gallery</a>
+        <div class="dropdown">
+            <a href="two-column-interests-page.html">Home</a>
+            <div class="dropdown-content">
+                <a href="two-column-interests-page.html#section1">Beautiful scenery.</a>
+                <a href="two-column-interests-page.html#section2">Hiking is a great way to make friends!</a>
+                <a href="two-column-interests-page.html#section3">The real reward is in the memories you'll make along
+                    the way.</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- First gallery block -->
+        <div class="gallery-block wide">
+            <img src="https://images.unsplash.com/photo-1516739711484-6f80025660c6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
+                alt="Coyote Gulch">
+            <div class="caption">Coyote Gulch</div>
+        </div>
+
+        <!-- Second gallery block -->
+        <div class="gallery-block wide">
+            <img src="https://images.unsplash.com/photo-1536625979259-edbae645c7c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2832&q=80"
+                alt="Mountain Trails">
+            <div class="caption">Mountain Trails</div>
+        </div>
+
+        <!-- Third gallery block -->
+        <div class="gallery-block tall">
+            <img src="https://images.unsplash.com/photo-1535515384173-d74166f26820?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80"
+                alt="Sunset Hike">
+            <div class="caption">Sunset Hike</div>
+        </div>
+
+        <!-- Fourth gallery block -->
+        <div class="gallery-block tall">
+            <img src="https://images.unsplash.com/photo-1606664817180-00391bdfb9d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
+                alt="Forest Adventure">
+            <div class="caption">Forest Adventure</div>
+        </div>
+
+        <!-- Fifth gallery block -->
+        <div class="gallery-block large">
+            <img src="https://images.unsplash.com/photo-1616098851253-01a1e1570101?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3073&q=80"
+                alt="Trail Reflections">
+            <div class="caption">Trail Reflections</div>
+        </div>
+
+        <!-- Sixth gallery block -->
+        <div class="gallery-block">
+            <img src="https://images.unsplash.com/photo-1610715897403-6bd03a9002a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80"
+                alt="Peak View">
+            <div class="caption">Peak View</div>
+        </div>
+
+        <!-- Seventh gallery block -->
+        <div class="gallery-block">
+            <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80"
+                alt="Hidden Pathway">
+            <div class="caption">Hidden Pathway</div>
+        </div>
+
+        <!-- Eighth gallery block -->
+        <div class="gallery-block">
+            <img src="https://images.unsplash.com/photo-1530804458434-67fe207c3a71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80"
+                alt="River Crossing">
+            <div class="caption">River Crossing</div>
+        </div>
+
+        <!-- Ninth gallery block -->
+        <div class="gallery-block tall">
+            <img src="https://images.unsplash.com/photo-1524863479829-916d8e77f114?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2970&q=80"
+                alt="Misty Mountains">
+            <div class="caption">Misty Mountains</div>
+        </div>
+
+        <!-- Tenth gallery block -->
+        <div class="gallery-block large">
+            <img src="https://images.unsplash.com/photo-1617677458944-b39140d92d02?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3132&q=80"
+                alt="Serenity Trail">
+            <div class="caption">Serenity Trail</div>
+        </div>
+
+        <!-- Eleventh gallery block -->
+        <div class="gallery-block tall">
+            <img src="https://images.unsplash.com/photo-1587221936504-3b0b8a09369c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3087&q=80"
+                alt="Valley Trek">
+            <div class="caption">Valley Trek</div>
+        </div>
+
+    </div>
+
+
+    <footer>
+        <p>&copy; 2023 Hiking and Sightseeing</p>
+    </footer>
+
+</body>
+
+</html>

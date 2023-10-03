@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiking and Sightseeing</title>
+    <style>
+        .container {
+            display: flex;
+            width: 1100px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        .sidebar,
+        .content {
+            padding: 20px;
+        }
+
+        .sidebar {
+            background-color: #e6e6e6;
+            flex: 1;
+        }
+
+        .content {
+            flex: 3;
+        }
+
+        header,
+        footer {
+            background: url("https://www.miyakohybridhotel.com/blog/wp-content/uploads/2020/03/Hiking-Trail.jpg") no-repeat center;
+            background-size: cover;
+            text-align: center;
+            padding: 20px 0;
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+        }
+
+        .img-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .img-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .img-container::after {
+            content: attr(data-caption);
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .img-container:hover::after {
+            display: block;
+        }
+
+
+
+        .content h2,
+        .content p,
+        .content img {
+            margin-bottom: 20px;
+        }
+
+        .content img {
+            float: left;
+            margin-right: 10px;
+            width: 250px;
+            height: auto;
+            max-width: 100%;
+        }
+
+        .content::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .content section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e6e6e6;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+
+        .content section:last-child {
+            border-bottom: none;
+        }
+
+        .content section::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hiking and Sightseeing</h1>
+    </header>
+
+    <nav>
+        <a href="gallery.html">Gallery</a>
+        <div class="dropdown">
+            <a href="two-column-interests-page.html" class="active">Home</a>
+            <div class="dropdown-content">
+                <a href="#section1">Beautiful scenery.</a>
+                <a href="#section2">Hiking is a great way to make friends!</a>
+                <a href="#section3">The real reward is in the memories you'll make along the way.</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <!-- smaller column -->
+        <aside class="sidebar">
+
+            <div class="img-container" data-caption="Hiking during golden hour.">
+                <img src="https://images.unsplash.com/photo-1476611338391-6f395a0ebc7b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGlraW5nfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60"
+                    alt="Hiking during golden hour.">
+            </div>
+
+            <div class="img-container" data-caption="Hiking to the top of a cliff.">
+                <img src="https://images.unsplash.com/photo-1458442310124-dde6edb43d10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="Hiking to the top of a cliff.">
+            </div>
+
+            <div class="img-container" data-caption="Hiking into a grassy wonderland.">
+                <img src="https://plus.unsplash.com/premium_photo-1682308191763-2813d4a2e746?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="Hiking into a grassy wonderland.">
+            </div>
+            <div class="img-container" data-caption="Along the trail.">
+                <img src="https://images.unsplash.com/photo-1525474089639-b5fff4440315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjR8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="Along the trail.">
+            </div>
+            <div class="img-container" data-caption="A beautiful mountain skyline.">
+                <img src="https://images.unsplash.com/photo-1500964757637-c85e8a162699?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTd8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="A beautiful mountain skyline.">
+            </div>
+
+        </aside>
+
+
+        <!-- wider column -->
+        <main class="content">
+            <section id="section1">
+                <h2>Beautiful scenery.</h2>
+                <img src="https://plus.unsplash.com/premium_photo-1661883853185-165f5869e6d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="Beautiful scenery">
+                <p>Hiking up the mountains is rewarding in itself, for once you reach your destination, you're bound to
+                    have an amazing view.</p>
+                <p>Leave in time to make it to the sunset or sunrise, you won't regret it!</p>
+            </section>
+
+            <section id="section2">
+                <h2>Hiking is a great way to make friends!</h2>
+                <img src="https://images.unsplash.com/photo-1578592391689-0e3d1a1b52b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="Hiking is a great way to make friends!">
+                <p>There are many hiking groups out there! Reach out and find people to hike with, who knows? Maybe
+                    you'll make lifelong friends. It's a common hobby amongst many groups of people!</p>
+                <p>Or, you can even take your own friends and family hiking. You can never get tired of hiking because
+                    there's just too much to explore! :]</p>
+            </section>
+
+            <section id="section3">
+                <h2>The real reward is in the memories you'll make along the way.</h2>
+                <img src="https://images.unsplash.com/photo-1519309621146-2a47d1f7103a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGhpa2luZ3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    alt="The real reward is in the memories you'll make along the way.">
+                <p>Don't forget to take pictures, or have something to remember each moment. One day you'll look back,
+                    and you will appreciate all of the memories that you made during these hikes.</p>
+                <p>Moments live temporarily, but the memories will always last. Keep each memory in a photograph.</p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Hiking and Sightseeing</p>
+    </footer>
+
+</body>
+
+</html>
