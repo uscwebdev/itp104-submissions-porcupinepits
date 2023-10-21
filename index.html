@@ -78,7 +78,26 @@
 
     section:last-of-type {
       border-bottom: none;
-      /* Remove the border from the last section */
+    }
+
+    @media (max-width: 767px) { /* mobile devices (767px and smaller) */
+
+      .column,
+      .clearfix,
+      .main,
+      body {
+        width: 100%;
+        padding: 0;
+      }
+
+      .favorite-activity {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .column {
+        float: none;
+      }
     }
   </style>
 </head>
@@ -132,7 +151,8 @@
           <li><a href="assignment_05/two-column-interests-page.html">Assignment 5: Interests Page Gallery Layout
             </a></li>
           </a></li>
-          <li><a href="assignment_06/two-column-interests-page.html">Assignment 6: Fonts, Drop-down Menu, Overlay Captions
+          <li><a href="assignment_06/two-column-interests-page.html">Assignment 6: Fonts, Drop-down Menu, Overlay
+              Captions
             </a></li>
         </ul>
       </div>
@@ -142,10 +162,11 @@
         <ul>
           <li><a href="index.html">Lab 02: Student Page</a></li>
           <li><a href="lab_03/web-resume.html">Lab 03: Updated Resume</a></li>
+          <li><a href="index.html">Lab 04: Student Page</a></li>
           <li><a href="lab_05/membership-form.html">Lab 05: Membership Form</a></li>
           <li><a href="lab_06/hobbies.html">Lab 06: Simple Photo Gallery</a></li>
           <li><a href="lab_07/imagepuzzle.html">Lab 7: Image Puzzle
-          </a></li>
+            </a></li>
         </ul>
       </div>
     </section>
