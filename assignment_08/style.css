@@ -1,0 +1,136 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #B3B3B3; 
+    background-color: #121212; 
+}
+
+header {
+    background: #1A1A1A; /* Slightly lighter dark shade for header */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #800080; /* Purple text for links */
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333; /* Divider between sections */
+    margin-bottom: 20px;
+    width: 50%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        width: 80%; /* Increase width for smaller screens */
+    }
+}
+
+
+h1, h2 {
+    color: #800080; 
+    font-weight: 700; /* Make headings bolder */
+}
+
+p {
+    color: #B3B3B3; /* Light gray for paragraph text */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1A1A1A; /* Slightly lighter dark shade for footer */
+    color: #fff;
+}
+
+/* ensuring image doesnt take up entire page */
+img {
+    max-width: 25%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    margin: auto;
+    max-width: 600px;
+    padding: 1em;
+    background: #f9f9f9;
+    border-radius: 1em;
+}
+
+.form-group {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: .7em;
+    border: 1px solid #ddd;
+    border-radius: .3em;
+    box-sizing: border-box;
+}
+
+button {
+    font-size: 1em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    padding: .8em 1.5em;
+    border-radius: .3em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.edit-btn, .delete-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #4CAF50;
+}
+
+.delete-btn {
+    background-color: #f44336; 
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
