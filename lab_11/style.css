@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    color: #333;
+}
+
+.puzzle-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1030px;
+    gap: 1px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.puzzle-container img {
+    width: 205px;
+    height: 142px;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.puzzle-container img:nth-child(3),
+.puzzle-container img:nth-child(17) {
+    position: absolute;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.puzzle-container img:nth-child(3) {
+    top: 110px;
+    left: 315px;
+}
+
+.puzzle-container img:nth-child(17) {
+    top: 50px;
+    left: 925px;
+}
